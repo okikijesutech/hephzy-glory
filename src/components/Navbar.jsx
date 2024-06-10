@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <div className='fixed top-0 w-full bg-white shadow-md z-50 flex items-center justify-between py-3 px-2'>
       <NavLink to='/'>
-        <h1>Hephzy-Glory</h1>
+        <h1 className='font-extrabold text-xl'>Hephzy-Glory</h1>
       </NavLink>
       <div className='hidden md:flex gap-12'>
         {menuItems.map((item) => (
