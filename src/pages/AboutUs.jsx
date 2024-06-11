@@ -8,7 +8,7 @@ import Testimonials from "../aboutContainer/Testimonials";
 
 const AboutUs = () => {
   return (
-    <div className='mt-[70px]'>
+    <div>
       <Header />
       <Us />
       <Features />

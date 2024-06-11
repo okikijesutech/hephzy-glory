@@ -1,9 +1,15 @@
-import React from "react";
+import ClassesHeader from "../classesContainer/ClassesHeader";
+import AcademicPrograms from "../classesContainer/AcademicPrograms";
+import ExtraPrograms from "../classesContainer/ExtraPrograms";
+import ContactUs from "../classesContainer/ContactUs";
 
 const Classes = () => {
   return (
     <div>
-      <h1>Classes</h1>
+      <ClassesHeader />
+      <AcademicPrograms />
+      <ExtraPrograms />
+      <ContactUs />
     </div>
   );
 };

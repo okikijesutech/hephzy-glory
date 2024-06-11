@@ -7,7 +7,7 @@ const Header = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className='absolute bg-black inset-0 opacity-50'></div>
-      <h1 className='relative text-white font-bold text-5xl'>About Us</h1>
+      <h1 className='relative text-white font-bold text-5xl'>Our Classes</h1>
     </div>
   );
 };

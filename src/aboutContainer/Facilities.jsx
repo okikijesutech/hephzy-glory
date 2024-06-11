@@ -6,7 +6,7 @@ import lab from "../assets/lab.webp";
 const Facilities = () => {
   return (
     <div className='mx-[160px] my-[120px]'>
-      <p className='text-blue-600'>Our Facilities</p>
+      <p className='text-blue-600 text-lg font-bold'>Our Facilities</p>
       <h3 className='font-bold text-4xl'>Top-Class Facilities</h3>
       <p className='w-[425px] mb-20'>
         Our modern and well-equipped facilities provide a safe and conducive
