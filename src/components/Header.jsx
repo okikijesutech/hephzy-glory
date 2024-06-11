@@ -1,13 +1,11 @@
-import bgImage from "../assets/bg-image.jpg";
-
-const Header = () => {
+const Header = ({ title, img }) => {
   return (
     <div
       className='relative flex items-center justify-center h-[375px] bg-cover bg-center bg-no-repeat'
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={{ backgroundImage: `url(${img})` }}
     >
       <div className='absolute bg-black inset-0 opacity-50'></div>
-      <h1 className='relative text-white font-bold text-5xl'>Our Classes</h1>
+      <h1 className='relative text-white font-bold text-5xl'>{title}</h1>
     </div>
   );
 };
