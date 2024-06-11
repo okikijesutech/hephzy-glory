@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-const Faq = () => {
+const Faqs = () => {
   const [isOpen, setIsOpen] = useState({
     admissionProcess: true,
     schoolHours: true,
@@ -93,4 +93,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Faqs;

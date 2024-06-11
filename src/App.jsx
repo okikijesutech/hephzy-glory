@@ -9,6 +9,7 @@ import About from "../src/pages/AboutUs";
 import MainLayout from "./layout/MainLayout";
 import Classes from "../src/pages/Classes";
 import Teacher from "./pages/Teacher";
+import Faq from "./pages/FaqPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/classes' element={<Classes />} />
         <Route path='/teacher' element={<Teacher />} />
+        <Route path='/faq' element={<Faq />} />
       </Route>
     )
   );

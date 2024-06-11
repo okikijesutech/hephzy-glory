@@ -1,4 +1,4 @@
-import Faq from "../containers/Faq";
+import Faqs from "../containers/Faqs";
 import Instructors from "../containers/Instructors";
 import OurJourney from "../containers/OurJourney";
 import WhyChooseUs from "../containers/WhyChooseUs";
@@ -21,7 +21,7 @@ const Home = () => {
       <WhyChooseUs />
       <OurJourney />
       <Instructors />
-      <Faq />
+      <Faqs />
       <ContactUs />
       <Expert />
     </div>

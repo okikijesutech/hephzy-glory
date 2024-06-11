@@ -9,7 +9,7 @@ const Expert = () => {
       <div className='absolute inset-0 bg-black opacity-70 rounded-2xl'></div>
       <div className='relative flex  flex-col items-center gap-5'>
         <p className='text-blue-500'>Join Us</p>
-        <h3 className='text-4xl font-bold'>Be an Expert With Us</h3>
+        <h3 className='text-5xl font-bold'>Be an Expert With Us</h3>
         <p className='w-[400px] text-center'>
           Our programs are designed to challenge and engage students, providing
           a comprehensive education that prepares them for success in the
