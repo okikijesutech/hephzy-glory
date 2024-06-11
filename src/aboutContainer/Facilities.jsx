@@ -5,20 +5,24 @@ import lab from "../assets/lab.webp";
 
 const Facilities = () => {
   return (
-    <div className='mx-[160px] my-[120px]'>
-      <p className='text-blue-600 text-lg font-bold'>Our Facilities</p>
-      <h3 className='font-bold text-4xl'>Top-Class Facilities</h3>
-      <p className='w-[425px] mb-20'>
+    <div className='mx-0 md:mx-[160px] my-[120px]'>
+      <p className='text-blue-600 text-lg font-bold text-center md:text-left'>
+        Our Facilities
+      </p>
+      <h3 className='font-bold text-4xl text-center md:text-left my-3'>
+        Top-Class Facilities
+      </h3>
+      <p className='mx-auto md:mx-0 w-[425px] mb-20 text-center md:text-left'>
         Our modern and well-equipped facilities provide a safe and conducive
         environment for learning, with state-of-the-art resources to enhance the
         learning experience.
       </p>
-      <div className='flex flex-col md:flex-row items-start justify-center gap-16'>
-        <div>
+      <div className='flex flex-col md:flex-row items-center md:items-start justify-center gap-16'>
+        <div className='text-center md:text-left'>
           <div className='w-[350px]'>
             <img src={lib} alt='' className='w-full h-full rounded-2xl' />
           </div>
-          <div>
+          <div className='flex flex-col items-center mt-2'>
             <h4 className='text-2xl font-bold my-2 '>
               Library and Resource Center
             </h4>
@@ -32,11 +36,11 @@ const Facilities = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className='text-center md:text-left'>
           <div className='w-[350px]'>
             <img src={lab} alt='' className='w-full h-full rounded-2xl' />
           </div>
-          <div>
+          <div className='flex flex-col items-center mt-2'>
             <h4 className='text-2xl font-bold my-2 '>Science Laboratory</h4>
             <p className='text-lg w-[300px]'>
               Our science laboratory is equipped with the latest equipment and
@@ -48,11 +52,11 @@ const Facilities = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className='text-center md:text-left'>
           <div className='w-[350px]'>
             <img src={ict} alt='' className='w-full h-full rounded-2xl' />
           </div>
-          <div>
+          <div className='flex flex-col items-center mt-2'>
             <h4 className='text-2xl font-bold my-2 '>ICT Lab</h4>
             <p className='text-lg w-[300px]'>
               Our ICT lab is equipped with state-of-the-art equipment to provide

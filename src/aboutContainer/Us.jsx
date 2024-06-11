@@ -6,19 +6,19 @@ const Us = () => {
   return (
     <div className='flex flex-col md:flex-row items-center justify-center gap-20 my-[120px]'>
       <div>
-        <p className='text-blue-600'>ABOUT US</p>
-        <h2 className='text-4xl font-bold w-[450px] leading-relaxed'>
+        <p className='text-blue-600 text-center md:text-left'>ABOUT US</p>
+        <h2 className='text-2xl md:text-4xl font-bold mx-auto md:mx-0  w-[350px] md:w-[450px] leading-relaxed text-center md:text-left'>
           The Best Education for Your child
         </h2>
-        <p className='w-[450px] leading-relaxed text-md mb-4'>
+        <p className='w-[450px] leading-relaxed text-md mb-4 text-center md:text-left'>
           Welcome to Hephzy-Glory School, a leading institution in providing
           quality education that fosters excellence and character development in
           your child.
         </p>
-        <div className='flex items-start gap-3 mb-4'>
+        <div className='flex flex-col md:flex-row items-center md:items-start gap-3 mb-4 text-center'>
           <FaUserGroup size={32} />
           <div>
-            <h3>Expert Teachers</h3>
+            <h3 className='font-bold text-xl'>Expert Teachers</h3>
             <p className='w-[375px] leading-relaxed text-md'>
               Our instructors are experienced and passionate professionals who
               provide excellent guidance, teaching and mentoring to students in
@@ -26,10 +26,10 @@ const Us = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-start gap-3'>
+        <div className='flex flex-col md:flex-row items-center md:items-start gap-3 text-center'>
           <FaInfinity size={32} />
           <div>
-            <h3>Unmatched Support</h3>
+            <h3 className='font-bold text-xl'>Unmatched Support</h3>
             <p className='w-[375px] leading-relaxed text-md'>
               We offer exceptional support to our students, ensuring they
               receive the necessary guidance and resources to achieve their

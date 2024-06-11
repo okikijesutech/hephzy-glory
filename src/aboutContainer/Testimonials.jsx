@@ -8,10 +8,10 @@ function Testimonials() {
       <h3 className='text-3xl font-bold text-center mt-6 '>
         Our Happy Customers
       </h3>
-      <div className='flex flex-col md:flex-row items-center justify-center gap-20 mt-10'>
-        <div>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-20 mt-10'>
+        <div className='flex flex-col items-center md:items-start'>
           <FaQuoteLeft size={48} />
-          <p className='w-[450px] text-2xl font-bold mt-6 mb-8'>
+          <p className='w-[450px] text-xl md:text-2xl font-bold text-center md:text-left mt-6 mb-8'>
             Hephzy-Glory has been a great school for my children. The teachers
             are excellent and the facilities are top-notch. I highly recommend
             this school.
