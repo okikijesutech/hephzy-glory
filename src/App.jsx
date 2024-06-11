@@ -10,6 +10,7 @@ import MainLayout from "./layout/MainLayout";
 import Classes from "../src/pages/Classes";
 import Teacher from "./pages/Teacher";
 import Faq from "./pages/FaqPage";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const router = createBrowserRouter(
@@ -20,6 +21,7 @@ function App() {
         <Route path='/classes' element={<Classes />} />
         <Route path='/teacher' element={<Teacher />} />
         <Route path='/faq' element={<Faq />} />
+        <Route path='/contact' element={<ContactUs />} />
       </Route>
     )
   );

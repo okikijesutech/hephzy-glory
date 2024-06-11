@@ -1,6 +1,6 @@
-import Button from "../components/Botton";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 import contact from "../assets/contact.webp";
+import Button from "../components/Botton";
 
 const ContactUs = () => {
   return (
@@ -25,11 +25,37 @@ const ContactUs = () => {
             <p>hepzibahnps@gmail.com</p>
           </div>
         </div>
-
-        <Button name={"Send a Message"} />
+        <div className='w-[500px]'>
+          <form className='space-y-4'>
+            <input
+              type='text'
+              placeholder='Your Name'
+              className='w-full p-2 border-2 border-black rounded'
+            />
+            <input
+              type='email'
+              placeholder='Your Email'
+              className='w-full p-2 border-2 border-black rounded'
+            />
+            <textarea
+              name='message'
+              id='message'
+              rows='4'
+              placeholder='Your Message'
+              className='w-full p-2 border-2 border-black rounded'
+            ></textarea>
+            <button className='bg-blue-500 text-white py-2 px-6 rounded w-full hover:bg-blue-600 transition-colors'>
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
       </div>
       <div className='w-[500px]'>
-        <img src={contact} alt='' className='w-full h-full rounded-[25px]' />
+        <img
+          src={contact}
+          alt='Contact Us'
+          className='w-full h-full rounded-[25px]'
+        />
       </div>
     </div>
   );

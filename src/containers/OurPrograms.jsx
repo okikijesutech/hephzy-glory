@@ -5,7 +5,7 @@ import primary from "../assets/primary.webp";
 
 const OurPrograms = () => {
   return (
-    <section className='flex flex-col items-center justify-center gap-8'>
+    <div className='flex flex-col items-center justify-center gap-8 my-[120px]'>
       <p className='text-blue-500'>our program</p>
       <h3 className='text-4xl'>Grade Programs</h3>
       <div className='flex flex-col md:flex-row gap-14 mt-8'>
@@ -69,7 +69,7 @@ const OurPrograms = () => {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import Countup from "react-countup";
 
 const OurJourney = () => {
   return (
-    <section className='flex flex-col md:flex-row justify-center items-center gap-[350px] my-[120px]  '>
+    <div className='flex flex-col md:flex-row justify-center items-center gap-[350px] my-[120px]  '>
       <div>
         <p className='text-blue-600'>Our Journey</p>
         <h3 className='text-4xl font-extrabold my-5'>Get in Touch With Us</h3>
@@ -38,7 +38,7 @@ const OurJourney = () => {
           <p>Selectable Class</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
