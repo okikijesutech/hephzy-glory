@@ -2,9 +2,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Facilities = () => {
   return (
-    <div className='mx-[160px] my-[120px]'>
+    <div className='mx-0 md:mx-[160px] my-[120px]'>
       <p className='text-blue-600 text-lg text-center font-bold'>Our Class</p>
-      <h3 className='font-bold text-4xl text-center'>Our Academic Programs</h3>
+      <h3 className='font-bold text-3xl md:text-4xl text-center'>
+        Our Academic Programs
+      </h3>
       <p className='w-[425px] mb-20 text-center mx-auto mt-6'>
         Hephzy-Glory School is a leading academic institution that caters to
         learners of all ages with a diverse range of programs in the nursery,
@@ -12,7 +14,7 @@ const Facilities = () => {
         well-rounded education, equipping students with the knowledge, skills,
         and values to succeed in their academic and personal lives.
       </p>
-      <div className='flex flex-col md:flex-row md:flex-wrap items-start justify-center gap-16'>
+      <div className='flex flex-col md:flex-row md:flex-wrap items-center md:items-start justify-center gap-16'>
         {[
           {
             title: "Science Explorers",
@@ -44,14 +46,24 @@ const Facilities = () => {
             description:
               "Our Mathematics Mastery program is designed to provide students with a comprehensive and engaging approach to mathematical learning. With a focus on problem-solving, critical thinking, and real-life applications, our program develops students’ mathematical fluency and promotes a love for learning this subject.",
           },
-        ].map((item) => (
-          <div>
-            <div className='w-[300px] h-[550px] p-4'>
-              <h4 className='text-4xl font-extrabold my-2 w-[235px] '>
+        ].map((item, index) => (
+          <div key={index}>
+            <div
+              className={`md:w-[300px] h-[500px] md:h-[675px] p-10 ${
+                index === 0 ? "bg-blue-500 rounded-[25px] text-white" : ""
+              }`}
+            >
+              <h4 className='text-2xl md:text-4xl font-extrabold my-2 md:w-[235px] '>
                 {item.title}
               </h4>
-              <p className='text-lg w-[225px] mt-6'>{item.description}</p>
-              <button className='text-blue-500 flex items-center gap-2 mt-3'>
+              <p className='text-lg w-[300px] md:w-[225px] mt-6'>
+                {item.description}
+              </p>
+              <button
+                className={`text-blue-500 flex items-center gap-2 mt-6 ${
+                  index === 0 ? "text-white" : ""
+                }`}
+              >
                 Learn More <FaArrowRight size={18} />
               </button>
             </div>

@@ -6,11 +6,11 @@ const Us = () => {
   return (
     <div className='flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-32 my-[120px]'>
       <div>
-        <p className='text-blue-600'>Our Classes</p>
-        <h3 className='text-4xl font-extrabold w-[450px] leading-relaxed'>
+        <p className='text-blue-600 text-center md:text-left'>Our Classes</p>
+        <h3 className='text-3xl md:text-4xl font-extrabold w-[450px] leading-relaxed text-center md:text-left'>
           Various Academic Programs Available
         </h3>
-        <p className='w-[450px] leading-relaxed text-md mb-4'>
+        <p className='w-[450px] leading-relaxed text-md text-center md:text-left mt-8 mb-4'>
           In addition to our regular academic programs, we offer a range of
           specialized classes and extracurricular activities designed to enrich
           students’ learning experiences. These programs include music, drama,
@@ -35,10 +35,10 @@ const Us = () => {
               "Our intership programs offer students a unique opportunity to explore different job oppurtunites and career path while pursuing their academic goals. These programs include job placement,  providing students with a future forward perspective and career minded competence.",
           },
         ].map((item) => (
-          <div className='flex items-start gap-3 my-4'>
+          <div className='flex flex-col md:flex-row items-center md:items-start gap-3 my-4'>
             <FaCircleCheck size={48} color='blue' />
-            <div>
-              <h4 className='text-3xl font-bold'>{item.title}</h4>
+            <div className='text-center md:text-left'>
+              <h4 className='text-2xl md:text-3xl font-bold'>{item.title}</h4>
               <p className='w-[375px] leading-relaxed text-md'>
                 {item.description}
               </p>

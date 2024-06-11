@@ -7,9 +7,9 @@ const ContactUs = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className='absolute bg-black inset-0 opacity-50'></div>
-      <div className='relative flex flex-col md:flex-row items-center gap-60 '>
-        <div className='text-white w-[625px]'>
-          <h1 className=' font-bold text-4xl'>
+      <div className='relative flex flex-col md:flex-row items-center gap-5 md:gap-60 '>
+        <div className='text-white w-[420px] md:w-[625px] text-center md:text-left'>
+          <h1 className=' font-bold w-[400px] md:w-full text-3xl md:text-4xl'>
             Contact Us For Excellent Service
           </h1>
           <p className='mt-4'>
@@ -18,7 +18,9 @@ const ContactUs = () => {
             via email or phone or visit our office — we’re always ready to help!
           </p>
         </div>
-        <button className='bg-blue-600 px-6 py-3 text-white'>Contact Us</button>
+        <button className='bg-blue-600 w-[100%] md:w-[15%] px-6 py-2 text-white'>
+          Contact Us
+        </button>
       </div>
     </div>
   );
