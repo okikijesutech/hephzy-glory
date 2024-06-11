@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import Button from "../components/Botton";
 import header from "../assets/header.jpg";
 
 const Header = () => {
   return (
-    <section className='flex flex-col md:flex-row items-center '>
+    <section className='flex flex-col w-full md:flex-row items-center'>
       <div className='relative'>
         <div className='md:w-[750px] h-[600px] '>
           <img
@@ -13,7 +14,7 @@ const Header = () => {
           />
         </div>
         <motion.div
-          className='absolute bottom-[100px] right-10 bg-white rounded-[15px] px-4 py-3'
+          className='absolute hidden md:block bottom-[100px] right-10 bg-white rounded-[15px] px-4 py-3'
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -26,20 +27,18 @@ const Header = () => {
           <p>Olivia Wilson</p>
         </motion.div>
       </div>
-      <div className='mt-10 md:mt-0 md:ml-[100px] text-center md:text-left'>
+      <div className='mt-10 md:mt-0 md:ml-[100px] w-full text-center md:text-left'>
         <p className='text-blue-700'>Welcome to hephzy glory school</p>
-        <h1 className='my-10  text-2xl md:text-6xl'>
-          Hephzy-Glory <br /> School - Nurturing the Future
+        <h1 className='my-6 md:my-10  text-4xl font-bold md:w-[450px] leading-10 md:text-5xl'>
+          Hephzy-Glory School - Nurturing the Future
         </h1>
-        <p className='text-sm md:text-lg w-[300px] md:w-[450px] '>
+        <p className='text-sm  md:text-xl mx-auto md:mx-0 w-[90%] md:w-[450px]'>
           Hephzy-Glory School is a nursery, primary, and secondary school
           located at 38 Ayodele Okeowo Soluyi Gbagada Lagos, Nigeria. We are
           dedicated to providing a comprehensive and engaging education that
           prepares our students for success in the future.
         </p>
-        <button className='bg-blue-400 px-4 py-3 mt-10 text-xl mx-auto md:mx-0'>
-          GET STARTED
-        </button>
+        <Button name={"GET STARTED"} />
       </div>
     </section>
   );

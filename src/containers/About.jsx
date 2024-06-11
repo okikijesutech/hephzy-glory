@@ -4,17 +4,15 @@ import Countup from "react-countup";
 
 const About = () => {
   return (
-    <section className='flex flex-col md:flex-row items-center justify-center gap-[100px]'>
-      <div>
-        <p className='text-blue-600 mb-6'>
-          <b>About</b>
+    <section className='flex flex-col md:flex-row items-center justify-center gap-y-[20px] gap-x-[100px] mx-0 md:mx-[180px] my-[120px]'>
+      <div className='w-full'>
+        <p className='text-blue-600 mb-8 md:mb-6 font-bold text-center md:text-left'>
+          About
         </p>
-        <h3 className='text-4xl '>
-          <b>
-            Helping Children <br /> Discover Their Full <br /> Potential
-          </b>
+        <h3 className='text-3xl md:text-5xl mx-auto md:mx-0 w-[80%] md:w-[450px] font-bold text-center md:text-left mb-4'>
+          Helping Children Discover Their Full Potential
         </h3>
-        <div className='w-[500px]'>
+        <div className='w-[450px] mx-auto md:mx-0 md:w-[500px]'>
           <img
             src={us}
             className='w-full h-full object-contain rounded-3xl'
@@ -22,8 +20,8 @@ const About = () => {
           />
         </div>
       </div>
-      <div>
-        <p className='mb-4'>Our Programs</p>
+      <div className='w-full ml-10 md:ml-0'>
+        <p className='mb-4 text-center md:text-left'>Our Programs</p>
         <div>
           <div className='flex items-center gap-4'>
             <FaCircleCheck />
@@ -45,22 +43,24 @@ const About = () => {
             </p>
           </div>
         </div>
-        <button className='bg-blue-500 px-4 py-3 my-10'>More about us</button>
-        <div className='flex flex-col md:flex-row gap-5 items-center justify-center'>
-          <div>
-            <p className='text-blue-400 text-5xl'>
+        <button className='bg-blue-600 w-[90%] md:w-[30%] text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
+          More about us
+        </button>
+        <div className='flex flex-col md:flex-row gap-12 mt-12 items-center justify-center'>
+          <div className='flex flex-col items-center'>
+            <p className='text-blue-400 text-3xl md:text-5xl'>
               <Countup start={0} end={250} duration={3} />+
             </p>
             <p>Graduated</p>
           </div>
-          <div>
-            <p className='text-blue-400 text-5xl'>
+          <div className='flex flex-col items-center'>
+            <p className='text-blue-400 text-3xl md:text-5xl'>
               <Countup start={0} end={640} duration={3} />+
             </p>
             <p>School projects</p>
           </div>
-          <div>
-            <p className='text-blue-400 text-5xl'>
+          <div className='flex flex-col items-center'>
+            <p className='text-blue-400 text-3xl md:text-5xl'>
               <Countup start={0} end={800} duration={3} />+
             </p>
             <p>Applicants</p>

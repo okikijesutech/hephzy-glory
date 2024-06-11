@@ -12,7 +12,7 @@ import Expert from "../containers/Expert";
 
 const Home = () => {
   return (
-    <div className='mt-[70px]'>
+    <div className='mt-[70px] overflow-x-hidden'>
       <Header />
       <Support />
       <About />

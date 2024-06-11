@@ -33,7 +33,7 @@ const Navbar = () => {
       </div>
 
       <NavLink to='/contact'>
-        <button className='hidden md:block bg-blue-500 px-3 py-2   rounded-full'>
+        <button className='hidden md:block bg-blue-500 px-6 py-3 text-white rounded-full'>
           Appointment
         </button>
       </NavLink>

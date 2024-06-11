@@ -27,7 +27,7 @@ const Instructors = () => {
         ].map((teacher, index) => (
           <div
             key={index}
-            className='group relative w-[300px] hover:shadow-xl hover:shadow-slate-500/50 transition-shadow duration-300'
+            className='group relative w-[400px] md:w-[300px] hover:shadow-xl hover:shadow-slate-500/50 transition-shadow duration-300'
           >
             <div className='w-full overflow-hidden rounded-t-[25px]'>
               <img
@@ -45,7 +45,7 @@ const Instructors = () => {
         ))}
       </div>
       <div className='text-center mt-8'>
-        <button className='bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition-colors'>
+        <button className='bg-blue-500 w-[90%] md:w-[12%] text-white py-3 px-5 rounded hover:bg-blue-600 transition-colors'>
           See All Instructors
         </button>
       </div>
