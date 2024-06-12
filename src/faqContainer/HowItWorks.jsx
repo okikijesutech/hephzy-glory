@@ -6,10 +6,10 @@ const HowItWorks = () => {
       <p className='text-blue-600 text-center text-lg font-bold '>
         How Its Work
       </p>
-      <h3 className='font-bold text-center text-5xl mt-6 mb-12'>
+      <h3 className='font-bold text-center text-3xl md:text-5xl mt-6 mb-12'>
         Our Learning Process
       </h3>
-      <div className='flex flex-col md:flex-row items-start justify-center gap-10'>
+      <div className='flex flex-col md:flex-row items-start justify-center gap-10 mx-[15px] md:mx-0'>
         {[
           {
             num: "01",
@@ -37,13 +37,13 @@ const HowItWorks = () => {
           },
         ].map((item) => (
           <div>
-            <div className='p-4 bg-blue-700 w-[65px] text-center rounded-lg text-white text-2xl font-bold mb-10'>
+            <div className='p-4 bg-blue-700 w-[150px] md:w-[65px] h-[65px] text-left md:text-center rounded-3xl md:rounded-lg text-white text-2xl font-bold mb-10'>
               {item.num}
             </div>
-            <h4 className='text-blue-600 text-3xl font-bold w-[250px] mb-1'>
+            <h4 className='text-blue-600 text-2xl md:text-3xl font-bold w-[350px] md:w-[250px] mb-3 md:mb-1'>
               {item.title}
             </h4>
-            <p className='w-[225px] font-extralight text-lg'>
+            <p className='w-[450px] md:w-[225px] font-extralight texmd md:text-lg'>
               {item.description}
             </p>
           </div>

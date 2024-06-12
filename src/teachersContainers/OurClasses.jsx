@@ -4,18 +4,18 @@ import Button from "../components/Botton";
 
 const Facilities = () => {
   return (
-    <div className='mx-[225px] my-[250px]'>
-      <div className='flex justify-between'>
-        <div>
+    <div className='mx-0 md:mx-[225px] my-[250px]'>
+      <div className='flex flex-col md:flex-row md:justify-between'>
+        <div className='text-center md:text-left mb-8 md:mb-0'>
           <p className='text-blue-600 text-lg font-bold'>Our Class</p>
           <h3 className='font-bold text-4xl '> Our classes</h3>
-          <p className='w-[425px] mb-20 text-xl mx-auto mt-6'>
+          <p className='w-[425px] mb-4 md:mb-20 text-xl mx-auto mt-6'>
             Our classes are designed to be engaging and interactive, supporting
             students to develop critical thinking and problem-solving skills,
             preparing them for success in the future.
           </p>
+          <Button name={"See All Classes"} />
         </div>
-        <Button name={"See All Classes"} />
       </div>
       <div className='flex flex-col md:flex-row md:flex-wrap items-start justify-center gap-16'>
         {[
@@ -35,12 +35,14 @@ const Facilities = () => {
               "Our Mathematics Mastery program is designed to provide students with a comprehensive and engaging approach to mathematical learning. With a focus on problem-solving, critical thinking, and real-life applications, our program develops students’ mathematical fluency and promotes a love for learning this subject.",
           },
         ].map((item) => (
-          <div className='w-[300px] h-[550px] p-4'>
-            <FaCircleCheck size={48} color='blue' />
-            <h4 className='text-4xl font-extrabold my-2 w-[235px] '>
+          <div className='mx-[30px] md:mx-0 w-[300px] h-[375px] md:h-[550px] p-4'>
+            <FaCircleCheck size={36} color='blue' />
+            <h4 className='text-4xl font-extrabold my-2 w-[400px] md:w-[235px] '>
               {item.title}
             </h4>
-            <p className='text-lg w-[225px] mt-6'>{item.description}</p>
+            <p className='text-lg w-[400px] md:w-[225px] mt-6'>
+              {item.description}
+            </p>
             <button className='text-blue-500 flex items-center gap-2 mt-3'>
               Learn More <FaArrowRight size={18} />
             </button>
