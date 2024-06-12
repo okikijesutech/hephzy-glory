@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import { FaXmark } from "react-icons/fa6";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -26,7 +25,12 @@ const Navbar = () => {
       </NavLink>
       <div className='hidden md:flex gap-12'>
         {menuItems.map((item) => (
-          <NavLink key={item.path} to={item.path} activeClassName='font-bold'>
+          <NavLink
+            key={item.path}
+            to={item.path}
+            activeClassName='text-blue-500 font-bold bg-gray-200'
+            className='text-gray-700 hover:text-blue-500 transition duration-300'
+          >
             {item.label}
           </NavLink>
         ))}
@@ -42,7 +46,7 @@ const Navbar = () => {
           onClick={handleToggle}
           className='text-gray-700 focus:outline-none'
         >
-          {toggle ? <FaXmark size={24} /> : <FaBars size={24} />}
+          {toggle ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
       {toggle && (
@@ -54,10 +58,14 @@ const Navbar = () => {
 
 const MobileMenu = ({ menuItems, onMenuToggle }) => {
   return (
-    <ul className='md:hidden flex flex-col items-center gap-4 py-4'>
+    <ul className='bg-white w-full absolute top-12 left-0 md:hidden flex flex-col items-center justify-center gap-4 py-4 border-b border-black'>
       {menuItems.map((item) => (
         <li key={item.path}>
-          <NavLink to={item.path} onClick={onMenuToggle}>
+          <NavLink
+            to={item.path}
+            onClick={onMenuToggle}
+            className='text-gray-700 hover:bg-gray-200 w-full transition duration-300 '
+          >
             {item.label}
           </NavLink>
         </li>
