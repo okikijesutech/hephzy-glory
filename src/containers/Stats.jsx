@@ -1,36 +1,85 @@
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import bgImage from "../assets/bg-image.jpg";
 import Countup from "react-countup";
+
 const Stats = () => {
+  const [inView, setInView] = useState(false);
+  const statsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(statsRef.current);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section
+      ref={statsRef}
       className='relative flex flex-col md:flex-row gap-[100px] items-center justify-center p-[90px] md:p-[250px] my-[50px] bg-cover bg-center bg-no-repeat text-white font-bold text-xl'
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className='absolute inset-0 bg-black opacity-70'></div>
-      <div className='relative flex flex-col items-center'>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ type: "tween", duration: 2 }}
+        className='relative flex flex-col items-center'
+      >
         <p className='text-blue-400 text-3xl md:text-5xl'>
-          <Countup start={0} end={100} duration={3} />+
+          {inView && <Countup start={0} end={100} duration={3} />}+
         </p>
         <p>Awards Winning</p>
-      </div>
-      <div className='relative flex flex-col items-center'>
+      </motion.div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ type: "tween", duration: 2 }}
+        className='relative flex flex-col items-center'
+      >
         <p className='text-blue-400 text-3xl md:text-5xl'>
-          <Countup start={0} end={500} duration={3} />+
+          {inView && <Countup start={0} end={500} duration={3} />}+
         </p>
         <p>Our Equipment</p>
-      </div>
-      <div className='relative flex flex-col items-center'>
+      </motion.div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ type: "tween", duration: 2 }}
+        className='relative flex flex-col items-center'
+      >
         <p className='text-blue-400 text-3xl md:text-5xl'>
-          <Countup start={0} end={250} duration={3} />+
+          {inView && <Countup start={0} end={250} duration={3} />}+
         </p>
         <p>Field Expertise</p>
-      </div>
-      <div className='relative flex flex-col items-center'>
+      </motion.div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ type: "tween", duration: 2 }}
+        className='relative flex flex-col items-center'
+      >
         <p className='text-blue-400 text-3xl md:text-5xl'>
-          <Countup start={0} end={2} duration={3} />+
+          {inView && <Countup start={0} end={2} duration={3} />}+
         </p>
         <p>Locations</p>
-      </div>
+      </motion.div>
     </section>
   );
 };

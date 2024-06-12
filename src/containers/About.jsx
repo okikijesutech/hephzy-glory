@@ -2,8 +2,34 @@ import { Link } from "react-router-dom";
 import us from "../assets/us.webp";
 import { FaCircleCheck } from "react-icons/fa6";
 import Countup from "react-countup";
+import { useEffect, useRef, useState } from "react";
 
 const About = () => {
+  const [inView, setInView] = useState(false);
+  const countupRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.unobserve(countupRef.current); // Unobserve after first intersection
+        }
+      },
+      { threshold: 0.1 } // Adjust the threshold as needed
+    );
+
+    if (countupRef.current) {
+      observer.observe(countupRef.current);
+    }
+
+    return () => {
+      if (countupRef.current) {
+        observer.unobserve(countupRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className='flex flex-col md:flex-row items-center justify-center gap-y-[20px] gap-x-[100px] mx-0 md:mx-[180px] my-[120px]'>
       <div className='w-full'>
@@ -49,22 +75,25 @@ const About = () => {
             More about us
           </button>
         </Link>
-        <div className='flex flex-col md:flex-row gap-12 mt-12 items-center justify-center'>
+        <div
+          ref={countupRef}
+          className='flex flex-col md:flex-row gap-12 mt-12 items-center justify-center'
+        >
           <div className='flex flex-col items-center'>
             <p className='text-blue-400 text-3xl md:text-5xl'>
-              <Countup start={0} end={250} duration={3} />+
+              {inView && <Countup start={0} end={250} duration={3} />}+
             </p>
             <p>Graduated</p>
           </div>
           <div className='flex flex-col items-center'>
             <p className='text-blue-400 text-3xl md:text-5xl'>
-              <Countup start={0} end={640} duration={3} />+
+              {inView && <Countup start={0} end={640} duration={3} />}+
             </p>
             <p>School projects</p>
           </div>
           <div className='flex flex-col items-center'>
             <p className='text-blue-400 text-3xl md:text-5xl'>
-              <Countup start={0} end={800} duration={3} />+
+              {inView && <Countup start={0} end={800} duration={3} />}+
             </p>
             <p>Applicants</p>
           </div>

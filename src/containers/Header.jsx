@@ -16,9 +16,9 @@ const Header = () => {
         </div>
         <motion.div
           className='absolute hidden md:block bottom-[100px] right-10 bg-white rounded-[15px] px-4 py-3'
-          initial={{ x: -100, opacity: 0 }}
+          initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ type: "tween", duration: 0.8 }}
         >
           <p className='max-w-[300px] relative pl-3'>
             <span className='absolute left-0 top-0 h-full w-1 bg-blue-500'></span>
