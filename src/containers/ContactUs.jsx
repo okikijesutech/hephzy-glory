@@ -4,10 +4,7 @@ import contact from "../assets/contact.webp";
 
 const ContactUs = () => {
   return (
-    <div
-      ref={topRef}
-      className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'
-    >
+    <div className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'>
       <div>
         <p className='text-lg text-blue-700 font-bold text-center'>
           Contact Us
