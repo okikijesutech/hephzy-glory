@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 import contact from "../assets/contact.webp";
 
 const ContactUs = () => {
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'>
+    <div
+      ref={topRef}
+      className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'
+    >
       <div>
         <p className='text-lg text-blue-700 font-bold text-center'>
           Contact Us
@@ -28,9 +32,11 @@ const ContactUs = () => {
             <p>hepzibahnps@gmail.com</p>
           </div>
         </div>
-        <button className='w-full md:w-[40%] bg-blue-600 text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
-          Send a Message
-        </button>
+        <Link to='/contact'>
+          <button className='w-full md:w-[40%] bg-blue-600 text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
+            Send a Message
+          </button>
+        </Link>
       </div>
       <div className='w-[430px] md:w-[500px]'>
         <img src={contact} alt='' className='w-full h-full rounded-[25px]' />

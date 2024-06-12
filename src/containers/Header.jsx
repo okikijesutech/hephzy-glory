@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Button from "../components/Botton";
 import header from "../assets/header.jpg";
 
@@ -38,7 +39,9 @@ const Header = () => {
           dedicated to providing a comprehensive and engaging education that
           prepares our students for success in the future.
         </p>
-        <Button name={"GET STARTED"} />
+        <Link to='/Contact'>
+          <Button name={"GET STARTED"} />
+        </Link>
       </div>
     </section>
   );

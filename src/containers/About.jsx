@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import us from "../assets/us.webp";
 import { FaCircleCheck } from "react-icons/fa6";
 import Countup from "react-countup";
@@ -43,9 +44,11 @@ const About = () => {
             </p>
           </div>
         </div>
-        <button className='bg-blue-600 w-[90%] md:w-[30%] text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
-          More about us
-        </button>
+        <Link to='/about'>
+          <button className='bg-blue-600 w-[90%] md:w-[30%] text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
+            More about us
+          </button>
+        </Link>
         <div className='flex flex-col md:flex-row gap-12 mt-12 items-center justify-center'>
           <div className='flex flex-col items-center'>
             <p className='text-blue-400 text-3xl md:text-5xl'>

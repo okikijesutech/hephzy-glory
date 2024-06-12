@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import t1 from "../assets/t1.webp";
 import t2 from "../assets/t2.webp";
 import t3 from "../assets/t3.webp";
@@ -45,9 +46,11 @@ const Instructors = () => {
         ))}
       </div>
       <div className='text-center mt-8'>
-        <button className='bg-blue-500 w-[90%] md:w-[12%] text-white py-3 px-5 rounded hover:bg-blue-600 transition-colors'>
-          See All Instructors
-        </button>
+        <Link to='/teacher'>
+          <button className='bg-blue-500 w-[90%] md:w-[12%] text-white py-3 px-5 rounded hover:bg-blue-600 transition-colors'>
+            See All Instructors
+          </button>
+        </Link>
       </div>
     </section>
   );

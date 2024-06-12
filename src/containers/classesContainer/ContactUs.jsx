@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bgImage from "../../assets/bg-image.jpg";
 
 const ContactUs = () => {
@@ -19,7 +20,7 @@ const ContactUs = () => {
           </p>
         </div>
         <button className='bg-blue-600 w-[100%] md:w-[15%] px-6 py-2 text-white'>
-          Contact Us
+          <Link to='/contact'>Contact Us</Link>
         </button>
       </div>
     </div>
