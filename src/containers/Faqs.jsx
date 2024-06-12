@@ -1,4 +1,6 @@
 import { useState } from "react";
+import useInView from "../hooks/useInView";
+import { motion } from "framer-motion";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Faqs = () => {
@@ -25,6 +27,8 @@ const Faqs = () => {
   const [activeItemSection2, setActiveItemSection2] = useState(
     "teacherToStudentRatio"
   );
+
+  const [faqRef, inView] = useInView();
 
   const handleClickSection1 = (key) => {
     setIsOpenSection1((prevState) => ({
@@ -98,13 +102,18 @@ const Faqs = () => {
   ];
 
   return (
-    <section className='my-[50px] md:my-[200px] px-4'>
+    <section ref={faqRef} className='my-[50px] md:my-[200px] px-4'>
       <p className='text-center mb-4 md:mb-6 text-blue-700'>FAQs</p>
       <h3 className='text-center font-extrabold text-xl md:text-2xl'>
         Frequently Asked Questions
       </h3>
       <div className='flex flex-col md:flex-row justify-center mx-2 md:mx-0 items-start md:gap-10'>
-        <div className='flex flex-col w-full md:w-[350px] lg:w-[600px] gap-4 md:gap-6 my-6 md:my-10'>
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.8 }}
+          className='flex flex-col w-full md:w-[350px] lg:w-[600px] gap-4 md:gap-6 my-6 md:my-10'
+        >
           {questionsSection1.map(({ key, question, answer }) => (
             <div key={key} className='pb-4'>
               <button
@@ -129,8 +138,13 @@ const Faqs = () => {
               )}
             </div>
           ))}
-        </div>
-        <div className='flex flex-col w-full md:w-[350px] lg:w-[600px] gap-4 md:gap-6 my-6 md:my-10'>
+        </motion.div>
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.8 }}
+          className='flex flex-col w-full md:w-[350px] lg:w-[600px] gap-4 md:gap-6 my-6 md:my-10'
+        >
           {questionsSection2.map(({ key, question, answer }) => (
             <div key={key} className='pb-4'>
               <button
@@ -155,7 +169,7 @@ const Faqs = () => {
               )}
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

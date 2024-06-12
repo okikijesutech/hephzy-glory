@@ -30,9 +30,14 @@ const Header = () => {
       </div>
       <div className='mt-10 md:mt-0 md:ml-[100px] w-full text-center md:text-left'>
         <p className='text-blue-700'>Welcome to hephzy glory school</p>
-        <h1 className='my-6 md:my-10  text-4xl font-bold md:w-[450px] leading-10 md:text-5xl'>
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className='my-6 md:my-10  text-4xl font-bold md:w-[450px] leading-10 md:text-5xl'
+        >
           Hephzy-Glory School - Nurturing the Future
-        </h1>
+        </motion.h1>
         <p className='text-sm  md:text-xl mx-auto md:mx-0 w-[90%] md:w-[450px]'>
           Hephzy-Glory School is a nursery, primary, and secondary school
           located at 38 Ayodele Okeowo Soluyi Gbagada Lagos, Nigeria. We are

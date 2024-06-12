@@ -1,10 +1,26 @@
+import { motion } from "framer-motion";
+import useInView from "../hooks/useInView";
 import slogo from "../assets/slogo.jpg";
 
 const Support = () => {
+  const [supportRef, inView] = useInView(false);
+
   return (
-    <section className='py-10 md:px-[250px] my-[120px]'>
-      <h3 className='text-center text-lg font-extralight'>Supported by:</h3>
-      <div className='flex flex-col md:flex-row items-center justify-evenly mt-24'>
+    <section ref={supportRef} className='py-10 md:px-[250px] my-[120px]'>
+      <motion.h3
+        initial={{ y: 50, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1.8 }}
+        className='text-center text-lg font-extralight'
+      >
+        Supported by:
+      </motion.h3>
+      <motion.div
+        initial={{ y: 60, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1.8 }}
+        className='flex flex-col md:flex-row items-center justify-evenly mt-24'
+      >
         {[
           {
             img: slogo,
@@ -36,7 +52,7 @@ const Support = () => {
             <p>{support.name}</p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

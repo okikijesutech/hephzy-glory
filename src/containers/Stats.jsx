@@ -1,33 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import useInView from "../hooks/useInView";
 import bgImage from "../assets/bg-image.jpg";
 import Countup from "react-countup";
 
 const Stats = () => {
-  const [inView, setInView] = useState(false);
-  const statsRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(statsRef.current);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
-      }
-    };
-  }, []);
+  const [statsRef, inView] = useInView();
 
   return (
     <section

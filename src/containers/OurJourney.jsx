@@ -1,31 +1,9 @@
+import { motion } from "framer-motion";
 import Countup from "react-countup";
-import { useEffect, useRef, useState } from "react";
+import useInView from "../hooks/useInView";
 
 const OurJourney = () => {
-  const [inView, setInView] = useState(false);
-  const journeyRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(journeyRef.current); // Unobserve after first intersection
-        }
-      },
-      { threshold: 0.1 } // Adjust the threshold as needed
-    );
-
-    if (journeyRef.current) {
-      observer.observe(journeyRef.current);
-    }
-
-    return () => {
-      if (journeyRef.current) {
-        observer.unobserve(journeyRef.current);
-      }
-    };
-  }, []);
+  const [journeyRef, inView] = useInView();
 
   return (
     <div
@@ -34,9 +12,14 @@ const OurJourney = () => {
     >
       <div className='text-center md:text-left'>
         <p className='text-blue-600 font-bold text-lg'>Our Journey</p>
-        <h3 className='text-3xl md:text-4xl font-extrabold my-3 md:my-5'>
+        <motion.h3
+          initial={{ y: 50, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.5 }}
+          className='text-3xl md:text-4xl font-extrabold my-3 md:my-5'
+        >
           Get in Touch With Us
-        </h3>
+        </motion.h3>
         <p className='w-[425px] text-lg font-light'>
           We welcome your inquiries and feedback. Please feel free to contact us
           to learn more about our programs and services.
