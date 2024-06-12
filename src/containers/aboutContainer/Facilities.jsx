@@ -1,7 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
-import lib from "../assets/lib.webp";
-import ict from "../assets/ict.webp";
-import lab from "../assets/lab.webp";
+import lib from "../../assets/lib.webp";
+import ict from "../../assets/ict.webp";
+import lab from "../../assets/lab.webp";
 
 const Facilities = () => {
   return (

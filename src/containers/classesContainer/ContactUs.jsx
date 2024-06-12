@@ -1,4 +1,4 @@
-import bgImage from "../assets/bg-image.jpg";
+import bgImage from "../../assets/bg-image.jpg";
 
 const ContactUs = () => {
   return (

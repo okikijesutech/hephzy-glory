@@ -1,8 +1,7 @@
-import t1 from "../assets/t1.webp";
-import t2 from "../assets/t2.webp";
-import t3 from "../assets/t3.webp";
-import t4 from "../assets/t4.webp";
-import Button from "../components/Botton";
+import t1 from "../../assets/t1.webp";
+import t2 from "../../assets/t2.webp";
+import t3 from "../../assets/t3.webp";
+import t4 from "../../assets/t4.webp";
 
 const Instructors = () => {
   return (

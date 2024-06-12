@@ -1,6 +1,5 @@
 import { FaPhone, FaEnvelope } from "react-icons/fa";
-import contact from "../assets/contact.webp";
-import Button from "../components/Botton";
+import contact from "../../assets/contact.webp";
 
 const ContactUs = () => {
   return (

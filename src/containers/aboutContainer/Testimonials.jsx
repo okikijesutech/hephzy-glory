@@ -1,5 +1,5 @@
 import { FaStar, FaQuoteLeft } from "react-icons/fa6";
-import test from "../assets/testimony.webp";
+import test from "../../assets/testimony.webp";
 
 function Testimonials() {
   return (

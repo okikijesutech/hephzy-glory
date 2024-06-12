@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import bgImage from "../assets/bg-image.jpg";
-import AcademicPrograms from "../classesContainer/AcademicPrograms";
-import ExtraPrograms from "../classesContainer/ExtraPrograms";
-import ContactUs from "../classesContainer/ContactUs";
+import AcademicPrograms from "../containers/classesContainer/AcademicPrograms";
+import ExtraPrograms from "../containers/classesContainer/ExtraPrograms";
+import ContactUs from "../containers/classesContainer/ContactUs";
 
 const Classes = () => {
   return (

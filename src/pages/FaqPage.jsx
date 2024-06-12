@@ -3,7 +3,7 @@ import bgImage from "../assets/bg-image.jpg";
 import Faqs from "../containers/Faqs";
 import OurJourney from "../containers/OurJourney";
 import Expert from "../containers/Expert";
-import HowItWorks from "../faqContainer/HowItWorks";
+import HowItWorks from "../containers/faqContainer/HowItWorks";
 
 const Faq = () => {
   return (

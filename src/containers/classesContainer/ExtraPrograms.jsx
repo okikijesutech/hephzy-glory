@@ -1,5 +1,5 @@
-import about1 from "../assets/about1.webp";
-import about2 from "../assets/about2.webp";
+import about1 from "../../assets/about1.webp";
+import about2 from "../../assets/about2.webp";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const Us = () => {
