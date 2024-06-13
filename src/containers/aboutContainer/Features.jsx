@@ -1,13 +1,21 @@
-import React from "react";
+import { motion } from "framer-motion";
+import useInView from "../../hooks/useInView";
 import { FaCheckCircle } from "react-icons/fa";
 
 const Features = () => {
+  const [usRef, inView] = useInView();
   return (
     <div className='mb-[120px]'>
       <p className='text-blue-500 text-center'>Our Features</p>
-      <h3 className='text-3xl md:text-4xl font-bold text-center mt-6'>
+      <motion.h3
+        ref={usRef}
+        initial={{ y: 40, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1.2 }}
+        className='text-3xl md:text-4xl font-bold text-center mt-6'
+      >
         Our Features Set Us Apart
-      </h3>
+      </motion.h3>
       <div className='flex flex-col md:flex-row items-center justify-center gap-16 mt-14'>
         <div className='text-center flex flex-col items-center gap-6'>
           <FaCheckCircle size={48} color='blue' />

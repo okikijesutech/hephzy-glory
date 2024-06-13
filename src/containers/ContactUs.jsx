@@ -30,7 +30,7 @@ const ContactUs = () => {
           </div>
         </div>
         <Link to='/contact'>
-          <button className='w-full md:w-[40%] bg-blue-600 text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
+          <button className='w-full md:w-[45%] bg-blue-600 text-white mt-5 py-3 px-4 rounded hover:bg-blue-700 transition-colors'>
             Send a Message
           </button>
         </Link>

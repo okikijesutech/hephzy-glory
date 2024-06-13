@@ -1,14 +1,22 @@
-import React from "react";
+import { motion } from "framer-motion";
+import useInView from "../../hooks/useInView";
 
 const HowItWorks = () => {
+  const [hitRef, inView] = useInView();
   return (
     <div className='my-[120px]'>
       <p className='text-blue-600 text-center text-lg font-bold '>
         How Its Work
       </p>
-      <h3 className='font-bold text-center text-3xl md:text-5xl mt-6 mb-12'>
+      <motion.h3
+        ref={hitRef}
+        initial={{ y: 50, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1.2 }}
+        className='font-bold text-center text-3xl md:text-5xl mt-6 mb-12'
+      >
         Our Learning Process
-      </h3>
+      </motion.h3>
       <div className='flex flex-col md:flex-row items-start justify-center gap-10 mx-[15px] md:mx-0'>
         {[
           {

@@ -1,16 +1,25 @@
+import { motion } from "framer-motion";
+import useInView from "../../hooks/useInView";
 import t1 from "../../assets/t1.webp";
 import t2 from "../../assets/t2.webp";
 import t3 from "../../assets/t3.webp";
 import t4 from "../../assets/t4.webp";
 
 const Instructors = () => {
+  const [instructorRef, inView] = useInView();
   return (
     <section className='my-[120px]'>
       <p className='text-center text-blue-800'>OUR TEACHERS</p>
       <h3 className='text-center font-extrabold text-4xl mt-4 mb-12'>
         Meet Our Instructors
       </h3>
-      <div className='flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-8'>
+      <motion.div
+        ref={instructorRef}
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1.2 }}
+        className='flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-8'
+      >
         {[
           { name: "Alfredo Torres", title: "LANGUAGE ARTS TEACHER", img: t1 },
           {
@@ -59,7 +68,7 @@ const Instructors = () => {
             <div className='absolute bottom-0 left-0 right-0 h-[8px] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

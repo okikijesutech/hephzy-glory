@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const Header = ({ title, img }) => {
   return (
     <div
@@ -5,7 +6,14 @@ const Header = ({ title, img }) => {
       style={{ backgroundImage: `url(${img})` }}
     >
       <div className='absolute bg-black inset-0 opacity-50'></div>
-      <h1 className='relative text-white font-bold text-5xl'>{title}</h1>
+      <motion.h1
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2 }}
+        className='relative text-white font-bold text-5xl'
+      >
+        {title}
+      </motion.h1>
     </div>
   );
 };

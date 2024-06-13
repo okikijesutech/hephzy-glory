@@ -47,7 +47,7 @@ const Instructors = () => {
       </div>
       <div className='text-center mt-8'>
         <Link to='/teacher'>
-          <button className='bg-blue-500 w-[90%] md:w-[12%] text-white py-3 px-5 rounded hover:bg-blue-600 transition-colors'>
+          <button className='bg-blue-500 w-[90%] md:w-[15%] text-white py-3 px-5 rounded hover:bg-blue-600 transition-colors'>
             See All Instructors
           </button>
         </Link>

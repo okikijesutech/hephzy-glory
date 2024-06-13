@@ -1,18 +1,29 @@
+import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
+import useInView from "../../hooks/useInView";
 import contact from "../../assets/contact.webp";
 
 const ContactUs = () => {
+  const [contactRef, inView] = useInView();
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'>
+    <div
+      ref={contactRef}
+      className='flex flex-col md:flex-row items-center justify-center gap-16 my-16'
+    >
       <div className='text-center md:text-left'>
         <p className='text-lg text-blue-700 font-bold'>Contact Us</p>
-        <h3 className='text-3xl font-extrabold my-4 md:my-10'>
-          Contact Us Today
-        </h3>
-        <p className='text-md mx-auto md:mx-0 w-[400px]'>
-          At Hephzy-Glory School, we are committed to helping children discover
-          their full potential, providing a nurturing and stimulating
-          environment that fosters intellectual and personal development.
+        <motion.h3
+          initial={{ y: 25, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.2 }}
+          className='text-3xl md:text-4xl md:w-[450px] font-extrabold my-4 md:my-10'
+        >
+          Connect with Hephzy-Glory School
+        </motion.h3>
+        <p className='text-md mx-auto md:mx-0 w-[450px]'>
+          If you have any questions or need more information about our school,
+          please don’t hesitate to contact us. Our friendly staff is always
+          available to help and answer any queries you may have.
         </p>
         <div className='flex flex-col md:flex-row items-center justify-between my-8'>
           <div className='flex flex-col items-center'>

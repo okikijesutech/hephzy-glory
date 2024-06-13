@@ -1,15 +1,24 @@
+import { motion } from "framer-motion";
+import { FaUserGroup, FaInfinity } from "react-icons/fa6";
+import useInView from "../../hooks/useInView";
 import about1 from "../../assets/about1.webp";
 import about2 from "../../assets/about2.webp";
-import { FaUserGroup, FaInfinity } from "react-icons/fa6";
 
 const Us = () => {
+  const [usRef, inView] = useInView();
   return (
     <div className='flex flex-col md:flex-row items-center justify-center gap-20 my-[120px]'>
       <div>
         <p className='text-blue-600 text-center md:text-left'>ABOUT US</p>
-        <h2 className='text-2xl md:text-4xl font-bold mx-auto md:mx-0  w-[350px] md:w-[450px] leading-relaxed text-center md:text-left'>
+        <motion.h2
+          ref={usRef}
+          initial={{ y: 25, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.2 }}
+          className='text-2xl md:text-4xl font-bold mx-auto md:mx-0  w-[350px] md:w-[450px] leading-relaxed text-center md:text-left'
+        >
           The Best Education for Your child
-        </h2>
+        </motion.h2>
         <p className='w-[450px] leading-relaxed text-md mb-4 text-center md:text-left'>
           Welcome to Hephzy-Glory School, a leading institution in providing
           quality education that fosters excellence and character development in

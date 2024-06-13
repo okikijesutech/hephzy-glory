@@ -1,20 +1,23 @@
 import { FaArrowRight } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
-import Button from "../../components/Botton";
 
 const Facilities = () => {
   return (
     <div className='mx-0 md:mx-[225px] my-[250px]'>
       <div className='flex flex-col md:flex-row md:justify-between'>
-        <div className='text-center md:text-left mb-8 md:mb-0'>
-          <p className='text-blue-600 text-lg font-bold'>Our Class</p>
-          <h3 className='font-bold text-4xl '> Our classes</h3>
-          <p className='w-[425px] mb-4 md:mb-20 text-xl mx-auto mt-6'>
-            Our classes are designed to be engaging and interactive, supporting
-            students to develop critical thinking and problem-solving skills,
-            preparing them for success in the future.
-          </p>
-          <Button name={"See All Classes"} />
+        <div className='text-center md:text-left mb-8 md:mb-0 flex flex-col md:flex-row md:gap-[550px]'>
+          <div>
+            <p className='text-blue-600 text-lg font-bold'>Our Class</p>
+            <h3 className='font-bold text-4xl '> Our classes</h3>
+            <p className='w-[425px] mb-4 md:mb-20 text-xl mx-auto mt-6'>
+              Our classes are designed to be engaging and interactive,
+              supporting students to develop critical thinking and
+              problem-solving skills, preparing them for success in the future.
+            </p>
+          </div>
+          <button className='bg-blue-600 text-white mt-5 py-3 px-6 rounded hover:bg-blue-700 transition-colors md:h-[50px] mx-auto md:mx-0 w-[90%] md:w-[180px]'>
+            See All Classes
+          </button>
         </div>
       </div>
       <div className='flex flex-col md:flex-row md:flex-wrap items-start justify-center gap-16'>
