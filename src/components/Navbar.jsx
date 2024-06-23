@@ -28,8 +28,11 @@ const Navbar = () => {
           <NavLink
             key={item.path}
             to={item.path}
-            activeClassName='text-blue-500 font-bold bg-gray-200'
-            className='text-gray-700 hover:text-blue-500 transition duration-300'
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-500 font-bold "
+                : "text-gray-700 hover:text-blue-500 transition duration-300"
+            }
           >
             {item.label}
           </NavLink>
@@ -64,7 +67,11 @@ const MobileMenu = ({ menuItems, onMenuToggle }) => {
           <NavLink
             to={item.path}
             onClick={onMenuToggle}
-            className='text-gray-700 hover:bg-gray-200 w-full transition duration-300 '
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-500 font-bold w-full transition duration-300"
+                : "text-gray-700 hover:bg-gray-200 w-full transition duration-300"
+            }
           >
             {item.label}
           </NavLink>
